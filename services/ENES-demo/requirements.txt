@@ -1,0 +1,6 @@
+numpy
+Cython
+pandas
+wget
+scipy
+matplotlib
