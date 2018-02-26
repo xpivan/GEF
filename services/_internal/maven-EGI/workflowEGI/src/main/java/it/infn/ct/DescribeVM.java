@@ -216,7 +216,10 @@ public class DescribeVM
 		Boolean verbose = false;
 
 		String ACTION = "describe";	
-
+		System.out.println("AUTH"+AUTH);
+		System.out.println("OCCI_ENDPOINT_HOST"+OCCI_ENDPOINT_HOST);
+		System.out.println("PROXY_PATH"+PROXY_PATH);
+		System.out.println("TRUSTED_REPOSITORY_PATH"+TRUSTED_CERT_REPOSITORY_PATH);	
 		// CESNET-MetaCloud
 		// [ *Describing* available resources (e.g. os_tpl, resource_tpl, compute, storage and network) ]
 
@@ -275,12 +278,15 @@ public class DescribeVM
 			HTTPAuthentication authentication = new VOMSAuthentication(PROXY_PATH);
 
 			authentication.setCAPath(TRUSTED_CERT_REPOSITORY_PATH);
-
+			System.out.println("authentication "+authentication);
 			Client client = new HTTPClient(URI.create(OCCI_ENDPOINT_HOST),
 			authentication, MediaType.TEXT_PLAIN, false);
 
 			//Connect client
+			System.out.println("Endpoint: "+OCCI_ENDPOINT_HOST);
+			System.out.println("Client Connect avant");
 			client.connect();
+			System.out.println("Client Connect avant");
 
 			Model model = client.getModel();
 			EntityBuilder eb = new EntityBuilder(model);
