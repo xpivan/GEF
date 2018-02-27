@@ -10,6 +10,10 @@ build: dependencies backend test webui
 
 backend: buildbackend test
 
+egi:
+	(cd services/_internal/maven-EGI/ && docker build -t maven-egi .) 
+	(cd egiserver && ./execute-workflow.sh)
+
 buildbackend:
 	$(GOPATH)/bin/golint ./gefserver
 	go vet ./gefserver

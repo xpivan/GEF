@@ -1,0 +1,46 @@
+{
+	"Docker": {
+		"UseEnvironmentVariables": false,
+		"Endpoint" : "unix:///var/run/docker.sock",
+		"Description": "The default Docker server on localhost"
+	},
+	"Pier": {
+		"InternalServicesFolder": "../services/_internal"
+	},
+	"Server": {
+		"Address": ":8443",
+		"ReadTimeoutSecs": 10,
+		"WriteTimeoutSecs": 10,
+		"TLSCertificateFilePath": "../ssl/server.crt",
+		"TLSKeyFilePath": "../ssl/server.key",
+		"B2ACCESS": {
+			"BaseURL": "https://unity.eudat-aai.fz-juelich.de",
+			"RedirectURL": "https://localhost:8443/wui/b2access/"
+		},
+		"B2DROP": {
+			"BaseURL": "https://b2drop.eudat.eu/"
+		},
+		"Administration": {
+			"SuperAdminEmail": "email@example.com",
+			"ContactLink": "https://www.eudat.eu/support-request?service=Other"
+		}
+	},
+	"EventSystem": {
+		"Address": ""
+	},
+	"Limits": {
+		"CpuShares": 1024,
+		"CpuPeriod": 100000,
+		"CpuQuota": 50000,
+		"Memory":     400024000,
+		"MemorySwap": 450024000
+	},
+	"Timeouts": {
+		"DataStaging": 1000,
+		"VolumeInspection": 1000,
+		"FileDownload": 1000,
+		"Preparation": 100,
+		"JobExecution": 7200,
+		"CheckInterval": 10
+	}
+}

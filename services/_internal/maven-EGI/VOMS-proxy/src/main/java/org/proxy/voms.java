@@ -34,7 +34,7 @@ import eu.emi.security.authn.x509.X509Credential;
 import eu.emi.security.authn.x509.X509CertChainValidatorExt;
 
 public class voms {
-	static final String keyPassword = "";
+	static final String keyPassword = "reivax26";
 	  
 	public static void createProxy() {
 		

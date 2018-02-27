@@ -1,46 +1,50 @@
 {
-	"Docker": {
-		"UseEnvironmentVariables": false,
-		"Endpoint" : "unix:///var/run/docker.sock",
-		"Description": "The default Docker server on localhost"
-	},
-	"Pier": {
-		"InternalServicesFolder": "../services/_internal"
-	},
-	"Server": {
-		"Address": ":8443",
-		"ReadTimeoutSecs": 10,
-		"WriteTimeoutSecs": 10,
-		"TLSCertificateFilePath": "../ssl/server.crt",
-		"TLSKeyFilePath": "../ssl/server.key",
-		"B2ACCESS": {
-			"BaseURL": "https://unity.eudat-aai.fz-juelich.de",
-			"RedirectURL": "https://localhost:8443/wui/b2access/"
+		"Docker": {
+				"Description": "",
+				"Endpoint": "tcp://147.228.242.229:2376",
+				"TLSVerify": true,
+				"CertPath": "/Users/pivan/.docker/cert.pem",
+				"KeyPath": "/Users/pivan/.docker/key.pem",
+				"CAPath": "/Users/pivan/.docker/ca.pem"
 		},
-		"B2DROP": {
-			"BaseURL": "https://b2drop.eudat.eu/"
+		"Limits": {
+				"CPUShares": 1024,
+				"CPUPeriod": 100000,
+				"CPUQuota": 50000,
+				"memory": 400024000,
+				"memorySwap": 450024000
 		},
-		"Administration": {
-			"SuperAdminEmail": "email@example.com",
-			"ContactLink": "https://www.eudat.eu/support-request?service=Other"
-		}
-	},
-	"EventSystem": {
-		"Address": ""
-	},
-	"Limits": {
-		"CpuShares": 1024,
-		"CpuPeriod": 100000,
-		"CpuQuota": 50000,
-		"Memory":     400024000,
-		"MemorySwap": 450024000
-	},
-	"Timeouts": {
-		"DataStaging": 1000,
-		"VolumeInspection": 1000,
-		"FileDownload": 1000,
-		"Preparation": 100,
-		"JobExecution": 7200,
-		"CheckInterval": 10
-	}
+		"Timeouts": {
+				"dataStaging": 1000,
+				"volumeInspection": 1000,
+				"fileDownload": 1000,
+				"preparation": 100,
+				"jobExecution": 7200,
+				"checkInterval": 10
+		},
+		"Pier": {
+				"InternalServicesFolder": "../services/_internal"
+		},
+		"Server": {
+				"Address": ":8443",
+				"ReadTimeoutSecs": 10,
+				"WriteTimeoutSecs": 10,
+				"TLSCertificateFilePath": "../ssl/server.crt",
+				"TLSKeyFilePath": "../ssl/server.key",
+				"B2Access": {
+						"BaseURL": "https://unity.eudat-aai.fz-juelich.de",
+						"RedirectURL": "https://localhost:8443/wui/b2access/"
+				},
+				"B2Drop": {
+						"BaseURL": "https://b2drop.eudat.eu/"
+				},
+				"Administration": {
+						"SuperAdminEmail": "email@example.com",
+						"ContactLink": "https://www.eudat.eu/support-request?service=Other"
+				}
+		},
+		"EventSystem": {
+				"Address": ""
+		},
+		"TmpDir": ""
 }

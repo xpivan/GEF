@@ -5,6 +5,7 @@ import:
   subpackages:
   - api/types/mount
   - api/types/swarm
+- package: golang.org/x/crypto
 - package: github.com/fsouza/go-dockerclient
 - package: github.com/gorilla/mux
   version: ~1.4.0
