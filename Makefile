@@ -12,7 +12,7 @@ backend: buildbackend test
 
 egi:
 	(cd services/_internal/maven-EGI/ && docker build -t maven-egi .) 
-	(cd egiserver && ./execute-workflow.sh)
+	(cd services/_internal/egiserver && ./execute-workflow.sh)
 
 buildbackend:
 	$(GOPATH)/bin/golint ./gefserver

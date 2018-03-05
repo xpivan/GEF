@@ -1,7 +1,7 @@
 {
 		"Docker": {
 				"Description": "",
-				"Endpoint": "tcp://147.228.242.229:2376",
+				"Endpoint": "tcp://147.228.242.231:2376",
 				"TLSVerify": true,
 				"CertPath": "/Users/pivan/.docker/cert.pem",
 				"KeyPath": "/Users/pivan/.docker/key.pem",
