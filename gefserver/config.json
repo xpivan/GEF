@@ -1,11 +1,8 @@
 {
 		"Docker": {
-				"Description": "",
-				"Endpoint": "tcp://147.228.242.231:2376",
-				"TLSVerify": true,
-				"CertPath": "/Users/pivan/.docker/cert.pem",
-				"KeyPath": "/Users/pivan/.docker/key.pem",
-				"CAPath": "/Users/pivan/.docker/ca.pem"
+			"UseEnvironmentVariables": false,
+			"Endpoint" : "unix:///var/run/docker.sock",
+			"Description": "The default Docker server on localhost"
 		},
 		"Limits": {
 				"CPUShares": 1024,
